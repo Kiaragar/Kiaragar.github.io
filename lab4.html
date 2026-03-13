@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kiara's Store</title>
+    </head> 
+    <body>
+        <script>
+            alert("Welcome to Kiara's Store!");
+
+            var name = window.prompt("Please enter your name:");
+            var item = window.prompt("What item would you like to order?");
+            var amount = window.prompt("How many items would you like to order?(1-99)");
+
+            var now = new Date();
+            var hour = now.getHours();
+            var greeting;
+
+            if (hour < 12) 
+            {
+                greeting = "Good morning";
+            } 
+            else if (hour < 18) 
+            {
+                greeting = "Good afternoon";
+            } 
+            else 
+            {
+                greeting = "Good evening";
+            }
+
+            var arrivalDate = new Date();
+            arrivalDate.setDate(arrivalDate.getDate() + 7);
+
+            document.writeln(greeting + " " + name + ", Thank you for ordering!" + "<br>");
+            document.writeln("You ordered " + amount + " " + item + "(s)." + "<br>");
+            document.writeln("Your order will arrive on " + arrivalDate);
+        </script>
+    </body>
+
+
+
+</html>
